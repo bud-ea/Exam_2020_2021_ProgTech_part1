@@ -9,7 +9,7 @@ int main()
 {
     DBClass c;
    // dp(c.load("ttt.txt", 0));
-    dp(c.load("t.txt", 0));
+    dp(c.load("t.txt", 0)); /// загрузка файла t.txt
     c.printAll();
     cout << endl;
 
@@ -27,5 +27,5 @@ int main()
     dp(c.remove(-14));
     dp(c.remove(2));
 
-    c.save("t2.txt", 0);
+    c.save("t2.txt", 0); /// сохранение в файл t2.txt
 }

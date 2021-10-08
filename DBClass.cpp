@@ -6,7 +6,7 @@
 
 using namespace std;
 
-int DBClass::load(const char* filename, const char* key)
+int DBClass::load(const char* filename, const char* key) /// файловая обработка
 {
     std::ifstream f(filename);
     std::string s;
@@ -35,14 +35,14 @@ int DBClass::load(const char* filename, const char* key)
     return 0;
 }
 
-void DBClass::printAll() const
+void DBClass::printAll() const /// печать содержимого нашего файла
 {
     for (const auto& e : data) {
         e.print();
     }
 }
 
-int DBClass::find(const char* secondname) const
+int DBClass::find(const char* secondname) const /// поиск фамилии человека
 {
     for (unsigned int i = 0; i < data.size(); i++) {
         if (data[i][1] == secondname) { return i; }
@@ -50,7 +50,7 @@ int DBClass::find(const char* secondname) const
     return -1;
 }
 
-int DBClass::add(const char* name, const char* second_name, const char* passport)
+int DBClass::add(const char* name, const char* second_name, const char* passport) /// проверка данных, при несоответствия формату, возвращает -1
 {
     for (const auto& e : string(name)) {
         if (!((e | 32) >= 'a' && (e | 32) <= 'z')) { return -1; }
@@ -77,7 +77,7 @@ int DBClass::remove(const int n)
     return 0;
 }
 
-void DBClass::save(const char* filename, const char* key)
+void DBClass::save(const char* filename, const char* key) /// сохранение нашего файла
 {
     ofstream f (filename);
     for (const auto& e : data) {
@@ -90,7 +90,7 @@ void DBClass::save(const char* filename, const char* key)
 }
 
 
-void DBRecord::print() const
+void DBRecord::print() const /// вывод полученных данных
 {
     for (const auto& e : data) {
         cout << e << '\t';
