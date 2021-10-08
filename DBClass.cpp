@@ -3,7 +3,12 @@
 #include <fstream>
 #include <iostream>
 #include <cstring>
-
+/*!
+    * @file   DBClass.cpp
+    * @brief   описание
+    * @author author
+    * @date   2021-10-08
+    */
 using namespace std;
 
 int DBClass::load(const char* filename, const char* key)
@@ -23,8 +28,8 @@ int DBClass::load(const char* filename, const char* key)
                 i--;
                 continue;
             }
-            auto pl = s.rfind("\"", l-1);
-            string ss = s.substr(pl+1, l-pl-1);
+            auto pl = s.rfind("\"", l - 1);
+            string ss = s.substr(pl + 1, l - pl - 1);
             newRecord[i] = std::move(ss);
         }
         if (i == 3) {
@@ -66,20 +71,20 @@ int DBClass::add(const char* name, const char* second_name, const char* passport
     for (int i = 5; i < 11; i++) {
         if (!(passport[i] >= '0' && passport[i] <= '9')) { return -1; }
     }
-    data.push_back({name, second_name, passport});
+    data.push_back({ name, second_name, passport });
     return data.size() - 1;
 }
 
 int DBClass::remove(const int n)
 {
-    if (n < 0 || (unsigned int) n >= data.size() - 1) { return -1; }
+    if (n < 0 || (unsigned int)n >= data.size() - 1) { return -1; }
     data.erase(data.begin() + n);
     return 0;
 }
 
 void DBClass::save(const char* filename, const char* key)
 {
-    ofstream f (filename);
+    ofstream f(filename);
     for (const auto& e : data) {
         f << "{" << endl;
         f << "\t\"Name\"=\"" << e[0] << "\"" << endl;

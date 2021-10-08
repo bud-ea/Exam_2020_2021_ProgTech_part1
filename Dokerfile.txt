@@ -1,0 +1,8 @@
+FROM ubuntu
+LABLE maintainer="Ogurtsova_201-351"
+
+RUN apt-get install-y gcc
+
+COPY exam_2020_2021_ProgTech ./MyProj
+
+WORKDIR MyProj

@@ -1,14 +1,19 @@
 #include "DBClass.h"
 #include <iostream>
-
+/*!
+    * @file   main.cpp
+    * @brief   описание
+    * @author author
+    * @date   2021-10-08
+    */
 using namespace std;
 
 #define dp(var) (std::cout << #var ": " << (var) << std::endl)
 
 int main()
 {
-    DBClass c;
-   // dp(c.load("ttt.txt", 0));
+    DBClass c; /*! Описани переменной класса DBClass*/
+    // dp(c.load("ttt.txt", 0));
     dp(c.load("t.txt", 0));
     c.printAll();
     cout << endl;

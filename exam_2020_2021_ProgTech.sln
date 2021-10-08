@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31727.386
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "exam_2020_2021_ProgTech", "exam_2020_2021_ProgTech\exam_2020_2021_ProgTech.vcxproj", "{8A440FB8-9279-4056-AC47-548ADCD9EC0B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8A440FB8-9279-4056-AC47-548ADCD9EC0B}.Debug|x64.ActiveCfg = Debug|x64
+		{8A440FB8-9279-4056-AC47-548ADCD9EC0B}.Debug|x64.Build.0 = Debug|x64
+		{8A440FB8-9279-4056-AC47-548ADCD9EC0B}.Debug|x86.ActiveCfg = Debug|Win32
+		{8A440FB8-9279-4056-AC47-548ADCD9EC0B}.Debug|x86.Build.0 = Debug|Win32
+		{8A440FB8-9279-4056-AC47-548ADCD9EC0B}.Release|x64.ActiveCfg = Release|x64
+		{8A440FB8-9279-4056-AC47-548ADCD9EC0B}.Release|x64.Build.0 = Release|x64
+		{8A440FB8-9279-4056-AC47-548ADCD9EC0B}.Release|x86.ActiveCfg = Release|Win32
+		{8A440FB8-9279-4056-AC47-548ADCD9EC0B}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8E089FCA-D2FC-461B-82BC-D4C07F9E810D}
+	EndGlobalSection
+EndGlobal
