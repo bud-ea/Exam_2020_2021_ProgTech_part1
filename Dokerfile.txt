@@ -1,0 +1,11 @@
+FROM ubuntu
+LABLE maintainer="Khorev Stepan"
+
+RUN apt update
+RUN apt -y install g++
+
+COPY Exam_2020_2021_ProgTech_part1 ./MyProj
+
+WORKDIR MyProj
+
+CMD ..
