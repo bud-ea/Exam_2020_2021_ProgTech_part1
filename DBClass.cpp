@@ -6,7 +6,7 @@
 
 using namespace std;
 
-int DBClass::load(const char* filename, const char* key)
+int DBClass::load(const char* filename, const char* key) //! Загрузка пользователей из файла
 {
     std::ifstream f(filename);
     std::string s;
@@ -35,14 +35,14 @@ int DBClass::load(const char* filename, const char* key)
     return 0;
 }
 
-void DBClass::printAll() const
+void DBClass::printAll() const //! Показывает всех добавленных пользователей
 {
     for (const auto& e : data) {
         e.print();
     }
 }
 
-int DBClass::find(const char* secondname) const
+int DBClass::find(const char* secondname) const //! Поиск по второму имени в базе данных
 {
     for (unsigned int i = 0; i < data.size(); i++) {
         if (data[i][1] == secondname) { return i; }
@@ -50,8 +50,12 @@ int DBClass::find(const char* secondname) const
     return -1;
 }
 
-int DBClass::add(const char* name, const char* second_name, const char* passport)
+int DBClass::add(const char* name, const char* second_name, const char* passport) //! Добавляет несколько пользователей в базу данных
 {
+    /*!
+     \brief Первые два for проверяют "Имя" и "Второе имя" пользователя на правильность
+            Последние два for проверяют "Паспорт", состоящий из двух частей, на правильность
+    */
     for (const auto& e : string(name)) {
         if (!((e | 32) >= 'a' && (e | 32) <= 'z')) { return -1; }
     }
@@ -70,14 +74,14 @@ int DBClass::add(const char* name, const char* second_name, const char* passport
     return data.size() - 1;
 }
 
-int DBClass::remove(const int n)
+int DBClass::remove(const int n) //! Убрает символ из описания пользователя
 {
     if (n < 0 || (unsigned int) n >= data.size() - 1) { return -1; }
     data.erase(data.begin() + n);
     return 0;
 }
 
-void DBClass::save(const char* filename, const char* key)
+void DBClass::save(const char* filename, const char* key) //! Сохранение всех добавленных пользователей в файл
 {
     ofstream f (filename);
     for (const auto& e : data) {
@@ -90,7 +94,7 @@ void DBClass::save(const char* filename, const char* key)
 }
 
 
-void DBRecord::print() const
+void DBRecord::print() const //! Вывести на экран пользователей
 {
     for (const auto& e : data) {
         cout << e << '\t';

@@ -3,7 +3,7 @@
 #include <array>
 #include <string>
 
-class DBRecord {
+class DBRecord { //! Класс существующих пользователей
   public:
     DBRecord() = default;
 	DBRecord(const char* name, const char* second_name, const char* passport)
@@ -15,7 +15,7 @@ class DBRecord {
 	std::array<std::string, 3> data;
 };
 
-class DBClass {
+class DBClass { //! Класс новой базы данных
   public:
 	int load(const char* filename, const char* key);
 	void printAll() const;

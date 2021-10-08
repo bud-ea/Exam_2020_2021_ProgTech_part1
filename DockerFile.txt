@@ -1,0 +1,10 @@
+
+FROM ubuntu
+
+LABEL author="Poletaev"
+LABEL group="201-352"
+
+RUN apt update -y && apt upgrade -y \
+&& apt install -y build-essential g++
+
+COPY MyProj/app/source
