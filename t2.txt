@@ -1,13 +1,20 @@
-c.load("t.txt", 0): -1
-
-c.find("Smith"): -1
-c.find("Scott"): -1
-
-c.add("abac", "qwe", "1234 223344"): 0
-c.add("ab?c", "qwe", "1234 223344"): -1
-c.add("abcc", "q e", "1234 223344"): -1
-c.add("abac", "qwe", "1234-223344"): -1
-c.add("abac", "qwe", "12F4 223344"): -1
-
-c.remove(-14): -1
-c.remove(2): -1
+{
+    "Name"="Kathryn"
+    "Second name"="Kopp"
+    "Passport"="2126 082358"
+}
+{
+    "Name"="Kimberly"
+    "Second name"="Smith"
+    "Passport"="4815 720352"
+}
+{
+    "Name"="Charles"
+    "Second name"="Smith"
+    "Passport"="6374 946990"
+}
+{
+    "Name"="abac"
+    "Second name"="qwe"
+    "Passport"="1234 223344"
+}
