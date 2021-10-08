@@ -1,0 +1,13 @@
+c.load("t.txt", 0): -1
+
+c.find("Smith"): -1
+c.find("Scott"): -1
+
+c.add("abac", "qwe", "1234 223344"): 0
+c.add("ab?c", "qwe", "1234 223344"): -1
+c.add("abcc", "q e", "1234 223344"): -1
+c.add("abac", "qwe", "1234-223344"): -1
+c.add("abac", "qwe", "12F4 223344"): -1
+
+c.remove(-14): -1
+c.remove(2): -1
