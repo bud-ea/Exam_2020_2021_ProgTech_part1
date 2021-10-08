@@ -8,7 +8,7 @@ using namespace std;
 int main()
 {
     DBClass c;
-   // dp(c.load("ttt.txt", 0));
+    // dp(c.load("ttt.txt", 0));
     dp(c.load("t.txt", 0));
     c.printAll();
     cout << endl;
