@@ -3,6 +3,12 @@
 #include <fstream>
 #include <iostream>
 #include <cstring>
+/*!
+    * @file   DBClass.cpp
+    * @brief   описание
+    * @author author
+    * @date   2021-10-08
+    */
 
 using namespace std;
 

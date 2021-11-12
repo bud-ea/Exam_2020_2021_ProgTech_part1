@@ -1,5 +1,11 @@
 #include "DBClass.h"
 #include <iostream>
+/*!
+    * @file   main.cpp
+    * @brief   краткое описание
+    * @author author
+    * @date   2021-10-08
+    */
 
 using namespace std;
 
@@ -7,7 +13,7 @@ using namespace std;
 
 int main()
 {
-    DBClass c;
+    DBClass c; /*! DBClass*/
    // dp(c.load("ttt.txt", 0));
     dp(c.load("t.txt", 0));
     c.printAll();
