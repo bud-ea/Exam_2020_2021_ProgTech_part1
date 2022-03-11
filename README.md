@@ -1,1 +1,18 @@
-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
+``` git clone https://github.com/bud-ea/Exam_2020_2021_ProgTech_part1``` — клонирование репозитория
+
+```git branch Balaev_201-331``` — создание ветки
+___
+#### Переключение ветки
+
+```git checkout Balaev_201-331```
+___
+
+```git branch``` — список веток и отображение текущей
+
+```git add —all``` — индексирование новых, измененных, удаленных файлов
+
+```git commit -m "сообщение коммита"``` — фиксация в коммите файлов добавленных командой git add
+
+``` git status``` - статус репозитория
+
+```git push -u origin Balaev_201-331 ``` — пушим в удаленный репозиторий ветку Balaev-201-331
